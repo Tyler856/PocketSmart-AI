@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PocketSmart AI</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏠 PocketSmart AI</h1>
+
+    <p>
+        Smart home interior recommendations based on your budget.
+    </p>
+
+    <form action="/generate-home" method="post">
+
+        <label>Budget (₹)</label>
+        <input
+            type="number"
+            name="budget"
+            placeholder="Example: 50000"
+            required
+        >
+
+        <label>Room</label>
+        <select name="room" required>
+            <option value="">Select room</option>
+            <option value="Living Room">Living Room</option>
+            <option value="Bedroom">Bedroom</option>
+            <option value="Kitchen">Kitchen</option>
+            <option value="Dining Room">Dining Room</option>
+        </select>
+
+        <label>Style</label>
+        <select name="style" required>
+            <option value="">Select style</option>
+            <option value="Modern">Modern</option>
+            <option value="Minimalist">Minimalist</option>
+            <option value="Traditional">Traditional</option>
+            <option value="Luxury">Luxury</option>
+        </select>
+
+        <label>Required Items</label>
+        <textarea
+            name="items"
+            rows="5"
+            placeholder="Example: Ceiling fan, lights, dining table, wall decoration"
+            required
+        ></textarea>
+
+        <button type="submit">
+            Generate Recommendations
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
